@@ -61,7 +61,8 @@ militia_vehicles = [
 ];
 
 opfor_boats = [
-	"O_Boat_Armed_01_hmg_F"
+	//"O_Boat_Armed_01_hmg_F"
+	"UK3CB_CHD_O_Fishing_Boat_DSHKM"
 ];
 
 opfor_vehicles = [
