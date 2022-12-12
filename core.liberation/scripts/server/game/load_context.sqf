@@ -21,14 +21,14 @@ if (count _context >= 1) then {
             } else {
                 [localize "$STR_SQUAD_WAIT"] remoteExec ["hintSilent", owner _player];
                 if ([_player, "FOB", GRLIB_fob_range] call F_check_near && isTouchingGround (vehicle _player)) then {
-                    private ["_grp", "_pos", "_uid", "_unit"];
+					private ["_grp", "_pos", "_uid", "_unit"];
                     _grp = createGroup [GRLIB_side_friendly, true];
                     {
                         _class = _x select 0;
                         _rank = _x select 1;
                         _loadout = _x select 2;
-
-                        _pos = getPosATL _player;
+						
+						 _pos = getPosATL _player;
                         _uid = getPlayerUID _player;
                         _unit = _grp createUnit [_class, _pos, [], 10, "NONE"];
                         sleep 0.2;
@@ -41,7 +41,7 @@ if (count _context >= 1) then {
 
                     if (count units _grp > 0) then {
                         [
-                            [ _grp ],
+                           [ _grp ],
                             {
                                 params ["_grp"];
                                 {

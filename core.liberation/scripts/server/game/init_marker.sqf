@@ -56,10 +56,9 @@ private ["_man", "_manPos"];
 GRLIB_SELL_Group = createGroup [GRLIB_side_civilian, true];
 {
     _manPos = _x;
-    _man = GRLIB_SELL_Group createUnit [SELL_Man, _manPos, [], 5, "NONE"];
+    _man = GRLIB_SELL_Group createUnit [SELL_Man, _manPos, [], 0, "NONE"];
     _man allowDamage false;
     _man setPosATL (_manPos vectorAdd [0, 0, 0.1]);
-    doStop _man;
     [_man, "LHD_krajPaluby"] spawn F_startAnimMP;
     sleep 0.1;
 } forEach GRLIB_Marker_SRV;
@@ -80,7 +79,8 @@ GRLIB_SHOP_Group = createGroup [GRLIB_side_civilian, true];
     if (_str find "sara_domek_sedy" > 0) then { _offset = [2.5, 1.8, 0.6]};     // Sarahni
     if (_str find "dum_istan3_hromada" > 0) then { _deskDir = (90 + _deskDir); _offset = [2.6, -0.6, -0.1]};  // Sarahni
     if (_str find "house_c_1_v2_ep1" > 0) then { _offset = [5.5, 1, 0.10]};     // Takistan
-    if (_str find "vn_shop_town_03" > 0) then { _offset = [1.5, -1, 0.10]};     // Cam Lao
+    if (_str find "vn_shop_town_03" > 0) then { _offset = [1.5, -1, 0.10]};     // Cam Lao	
+    if (_str find "Land_CarService_F" > 0) then { _offset = [-1.5, -1, 0.10]};     // Rosche
     if (_str find "house_big_02" > 0) then { _deskDir = (180 + _deskDir); _offset = [-0.7, -2, 0.25]};
 
     _deskPos = (getposASL _shop) vectorAdd ([_offset, -_deskDir] call BIS_fnc_rotateVector2D);
@@ -94,7 +94,6 @@ GRLIB_SHOP_Group = createGroup [GRLIB_side_civilian, true];
     _man disableCollisionWith _desk;
     _man setDir _deskDir;
     _man setPosATL _manPos;
-    doStop _man;
     [_man, "AidlPercMstpSnonWnonDnon_AI"] spawn F_startAnimMP;
     //_man enableSimulationGlobal false; // disabled to keep animation
     sleep 0.1;
