@@ -4,10 +4,6 @@ if (isNull _unit) exitWith {0};
 // item name MUST be lowercase
 private _fixed_price = [
 	//["launch_o_vorona_brown_f" , 200]
-	["ace_elasticbandage", 2],
-	["ace_packingbandage",1],
-	["ace_quikclot",1],
-	["ace_fielddressing",1]
 ];
 
 private _expensive_items = [
@@ -28,56 +24,23 @@ private _expensive_items = [
 	"titan_at",
 	"titan_ap",
 	"vorona_he",
-	"vorona_heat",
-	"rhs_mag_9k38_rocket",
-	"rhs_fgm148_magazine_at",
-	"rhs_fgm148_magazine_at_empty",
-	"rhs_fim92_mag",
-	"rhs_m136_mag",
-	"rhs_m136_hedp_mag",
-	"rhs_mag_maaws_heat",
-	"rhs_mag_maaws_hedp",
-	"rhs_mag_maaws_he",
-	"mraws_heat_f",
-	"mraws_he_f",
-	"rhs_m72a7_mag",
-	"rhs_mag_smaw_heaa",
-	"rhs_mag_smaw_hedp",
-	"cba_fakelaunchermagazine",
-	"rhs_panzerfaust60_mag",
-	"rhs_rpg18_mag",
-	"rhs_rpg26_mag",
-	"rpg7_f",
-	"rhs_rpg7_pg7v_mag",
-	"rhs_rpg7_pg7vm_mag",
-	"rhs_rpg7_pg7vs_mag",
-	"rhs_rpg7_pg7vl_mag",
-	"rhs_rpg7_pg7vr_mag",
-	"rhs_rpg7_og7v_mag",
-	"rhs_rpg7_tbg7v_mag",
-	"rhs_rpg7_type69_airburst_mag",
-	"rhs_rpg75_mag",
-	"rhs_rshg2_mag",
-	"uk3cb_blowpipe_round",
-	"rhs_m136_hp_mag",
-	"rhs_m80_mag"
+	"vorona_heat"
 ];
 
 private _free_items = [
 	"ace_",
-//	"rnd_",
+	"rnd_",
 	"firstaidkit",
-//	"smokeshell",
-//	"grenade",
+	"smokeshell",
+	"grenade",
 	"charge_remote_mag",
-//	"laserbatteries",
+	"laserbatteries",
 	"chemlight",
 	"itemmap",
-//	"itemgps",
+	"itemgps",
 	"itemradio",
 	"itemcompass",
-	"itemwatch",
-	"kat_"
+	"itemwatch"
 ];
 
 // overide custom list

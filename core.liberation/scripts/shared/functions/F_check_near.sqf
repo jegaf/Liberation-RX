@@ -23,12 +23,12 @@ switch ( _list ) do {
 	case "SPAWNT" : { _classlist = GRLIB_mobile_respawn};
 	case "SPAWNV" : { _classlist = [Respawn_truck_typename, huron_typename]};
 	case "MEDIC" : { _classlist = ai_healing_sources};
-	case "ARSENAL" : { _classlist = [Arsenal_typename]};
 	case "REFUEL" : { _classlist = [canister_fuel_typename, fuelbarrel_typename]};
+	case "ARSENAL" : { _classlist = [Arsenal_typename]};
 	case "REAMMO" : { _classlist = vehicle_rearm_sources};
 	case "REAMMO_AI" : { _classlist = ai_resupply_sources};
 	case "REPAIR_AI" : { _classlist = vehicle_repair_sources};
-	case "REPAINT" : { _classlist = [repair_offroad, "Land_RepairDepot_01_civ_F", "Land_CashDesk_F"]};
+	case "REPAINT" : { _classlist = [repair_offroad, "Land_RepairDepot_01_civ_F"]};
 };
 
 // Include FOB

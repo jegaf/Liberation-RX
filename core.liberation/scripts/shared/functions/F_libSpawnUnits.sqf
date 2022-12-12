@@ -23,13 +23,13 @@ private _grp = createGroup [_side, true];
 	if ( (count units _grp) < _nb_unit) then {
 		_validpos = zeropos;
 		_max_try = 10;
-
+        
         if (_type == "divers") then {
-            _validpos = _spawnpos vectorAdd [floor(random 20), floor(random 20), -5];
+            _validpos = _spawnpos vectorAdd [floor(random 20), floor(random 20), -4];
         };
 
         if (_type == "para") then {
-            _validpos = _spawnpos vectorAdd [floor(random 20), floor(random 20), 0];
+            _validpos = _spawnpos vectorAdd [floor(random 30), floor(random 30), 0];
         };
 
 		while { (_validpos isEqualTo zeropos) && _max_try > 0 } do {
@@ -41,15 +41,16 @@ private _grp = createGroup [_side, true];
 			_unit = _grp createUnit [_x, _validpos, [], 5, "NONE"];
 			_unit addMPEventHandler ["MPKilled", {_this spawn kill_manager}];
 			[_unit] joinSilent _grp;
+		//	if (_type == "para") then {_unit addBackpack "B_Parachute"};
 			if (_type in ["militia", "guard"]) then {[ _unit ] call loadout_militia};
 			[ _unit ] call reammo_ai;
             _unit switchMove "amovpknlmstpsraswrfldnon";
-			_unit playMoveNow "amovpknlmstpsraswrfldnon";
+			_unit playMoveNow "amovpknlmstpsraswrfldnon"; 
             sleep 0.1;
 		} else {
 			diag_log format ["--- LRX Error: No place to build unit %1 at position %2", _x, _spawnpos];
 		};
-
+		
         if (_type == "para") then {
 			_backpack = backpack _unit;
 			if ( _backpack != "" && _backpack != "B_Parachute" ) then {
