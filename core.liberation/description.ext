@@ -8,14 +8,14 @@ loadScreen = "res\liberation.paa";
 onLoadIntro = "Welcome on the Liberaton RX planet.";
 
 respawn = 3;
-respawndelay = 5;
-respawnButton = 0;
+respawndelay = 15;
+respawnButton = 1;
 respawnOnStart = 0;
-reviveMode = 0; 
+//reviveMode = 0; 
 disabledAI = true;
 enableDebugConsole = 1;
 allowFunctionsLog = 0;
-forceRotorLibSimulation = 2;
+//forceRotorLibSimulation = 2;
 
 saving = 0;
 briefing = 0;
@@ -27,6 +27,7 @@ class CfgFunctions {
 	#include "addons\LARs\blacklistArsenal\functions\blacklistArsenal.fncs"
 	#include "addons\GRAD\cfgFunctions.hpp"
 	#include "addons\SDB_DALE\CfgFunctions.hpp"
+	#include "CfgFunctions.hpp"
 };
 
 class cfgSounds {
@@ -41,7 +42,7 @@ class cfgSounds {
 class Header {
 	gameType = CTI;
 	minPlayers = 1;
-	maxPlayers = 22;
+	maxPlayers = 28;
 };
 
 class CfgDebriefing {
@@ -68,3 +69,42 @@ class CfgDebriefing {
 #include "addons\VAM\defines.hpp"
 #include "addons\VAM\VAM_GUI_controls.hpp"
 #include "addons\VAM\VAM_GUI_classes.hpp"
+
+/*
+    ----- Corpse & Wreck Management -----
+*/
+
+// Sets the mode for corpse removal manager.
+// 0 = None                 - None of the units are managed by the manager
+// 1 = All                  - All units are managed by the manager
+// 2 = None_But_Respawned   - Only units that can respawn are managed by the manager
+// 3 = All_But_Respawned    - All units are managed by the manager with exception of respawned (opposite to mode 2)
+corpseManagerMode = 1;
+
+// Corpse limit before which (<=) corpseRemovalMaxTime applies and after which (>) corpseRemovalMinTime applies.
+corpseLimit = 15;
+
+// Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is reached.
+corpseRemovalMinTime = 75;
+
+// Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
+corpseRemovalMaxTime = 3600;
+
+// Sets the mode for wreck removal manager.
+// 0 = None                 - None of the vehicles are managed by the manager
+// 1 = All                  - All vehicles are managed by the manager
+// 2 = None_But_Respawned   - Only vehicles that can respawn are managed by the manager
+// 3 = All_But_Respawned    - All vehicles are managed by the manager with exception of respawned (opposite to mode 2)
+wreckManagerMode = 1;
+
+// Vehicle wreck limit before which (<=) wreckRemovalMaxTime applies and after which (>) wreckRemovalMinTime applies.
+wreckLimit = 5;
+
+// Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
+//wreckRemovalMinTime = 1200;
+
+// Maximum time a wreck can remain on the ground if total number of wrecks is equal or under wreckLimit.
+//wreckRemovalMaxTime = 7200;
+
+// The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
+minPlayerDistance = 25;

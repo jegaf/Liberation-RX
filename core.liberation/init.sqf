@@ -46,8 +46,14 @@ if (!isDedicated && hasInterface) then {
 	waitUntil { sleep 1; !isNil "GRLIB_init_server" };
 	[] execVM "scripts\client\init_client.sqf";
 } else {
-	setViewDistance 2000;
-	setTerrainGrid 25;
+	setViewDistance 800;
+//	setTerrainGrid 25;
 };
 
 diag_log "--- Init stop ---";
+
+//Advanced Towing and Slingloading
+[] spawn a3ph_fnc_advancedTowing;
+[] spawn a3ph_fnc_advancedSlingLoad;
+
+player addrating 100000;

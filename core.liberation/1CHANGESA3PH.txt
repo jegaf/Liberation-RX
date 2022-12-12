@@ -1,0 +1,36 @@
+\mod_template\RHS_USAF\arsenal.sqf
+
+
+\mod_template\RHS_USAF\classnames_west.sqf
+
+\mod_template\RHS_AFRF\classnames_east.sqf
+
+
+\mod_template\RHS_USAF\loadout\player_set1.sqf
+
+vehicle_fuel.sqf
+
+
+gameplay_constants.sqf
+
+
+\mod_template\RHS_USAF\classnames_west
+line 262
+mk19 to rhsusf_m1025_w_m2
+
+
+\addons\PAR\PAR_global_functions.sqf
+// line 177
+
+
+\scripts\shared\functions\F_loadoutPrice.sqf
+
+\scripts\server\game\init_marker.sqf
+line 83
+
+/ui/params
+
+GREUH_config.sqf
+
+manage_one_sector.sqf
+line 61 	_building_ai_max = round (10 * _popfactor) ;

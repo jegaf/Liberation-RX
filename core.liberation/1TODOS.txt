@@ -1,0 +1,26 @@
+classnames.sqf > OPFOR squad composition
+
+AI ace medical disable
+fuel consumption check
+remove ace blood check
+adjust activation distance Check 300m to 800m
+
+v5
+sunken supplies boat type - csat to rusfor												DONE
+rocket rounds make expensive															DONE
+vulnerability timer 15mins to 25mins 													DONE
+remove folded mk6 mortars																DONE
+update to latest version
+\addons\PAR\PAR_global_functions.sqf, comment line 177 or find STR_EXTENDED_OPTIONS		DONE
+enable passive income?			
+classnames_west.sqf line 262 change mk19 to m2											DONE
+fixed_position.sqf
+
+v6
+sunken supplies change in classnames_east.sqf of RHS_AFRF	line 63 opfor_boats 		DONE	
+init_marker.sqf line 83																	DONE
+mission params civilian to normal														DONE
+try RPT_vip_textures.sqf
+
+v7
+\scripts\server\battlegroup\spawn_battlegroup.sqf	-line27 +line28
