@@ -58,31 +58,11 @@ light_vehicles = [
 	["rhsusf_m1240a1_usarmy_wd",5,50,10,0],
 	["rhsusf_m1240a1_m2_usarmy_wd",5,150,5,GRLIB_perm_inf],
 	["rhsusf_m1240a1_mk19_usarmy_wd",5,150,5,GRLIB_perm_tank],
-	["rhsusf_stryker_m1126_m2_wd",5,250,5,GRLIB_perm_tank],
-		["B_Quadbike_01_F",1,7,3,0],                                        // Quad Bike
-    ["rhsusf_m998_w_2dr_fulltop",1,75,5,0],                             // M1097A2 (2D)
-    ["rhsusf_M1220_usarmy_wd",2,120,6,0],                                // M1220
-    ["rhsusf_M1220_M2_usarmy_wd",2,140,6,0],                            // M1220 (M2)
-    ["rhsusf_M1220_MK19_usarmy_wd",2,160,6,0],                          // M1220 (Mk19)
-    ["rhsusf_M1220_M153_M2_usarmy_wd",3,140,6,0],                       // M1220 (M2 CROWS)
-    ["rhsusf_M1220_M153_MK19_usarmy_wd",3,160,6,0],                     // M1220 (Mk19 CROWS)
-    ["rhsusf_M1232_usarmy_wd",3,140,6,0],                                // M1232
-    ["rhsusf_M1232_M2_usarmy_wd",3,140,6,0],                            // M1232 (M2)
-    ["rhsusf_M1232_MK19_usarmy_wd",3,160,6,0],                          // M1232 (Mk19)
-    ["rhsusf_M1230a1_usarmy_wd",3,100,6,0],                              // M1230A1 (MEDEVAC)
-    ["rhsusf_M1083A1P2_wd_open_fmtv_usarmy",3,125,10,0],                  // M1083A1P2 Transport
-    ["rhsusf_M1083A1P2_wd_fmtv_usarmy",3,125,10,0],                       // M1083A1P2 Transport (Covered)
-    ["rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy",3,125,10,0],               // M1083A1P2
-    ["rhsusf_M977A4_BKIT_usarmy_wd",3,125,10,0],                          // M977A4 BKIT
-    ["rhsusf_M977A4_BKIT_M2_usarmy_wd",3,140,10,0],                      // M977A4 BKIT (HMG)
-    ["rhsusf_M1117_W",3,150,10,0]                                       // M1117 ASV
+	["rhsusf_stryker_m1126_m2_wd",5,250,5,GRLIB_perm_tank]
 ];
 
 heavy_vehicles = [
-    ["rhsusf_m113_usarmy",5,180,10,0],                                  // M113A3 (M2)
-    ["rhsusf_m113_usarmy_MK19",5,200,10,0],                             // M113A3 (Mk19)
-    ["rhsusf_m113_usarmy_medical",5,150,10,0],                           // M113A3 (Medical)
-	["RHS_M2A2_wd",10,240,20,GRLIB_perm_log],
+	["RHS_M2A2_wd",10,250,20,GRLIB_perm_log],
 	["RHS_M2A3_wd",10,250,20,GRLIB_perm_log],
 	["RHS_M2A2_BUSKI_WD",15,300,25,GRLIB_perm_log],
 	["RHS_M2A3_BUSKIII_wd",15,350,25,GRLIB_perm_log],
@@ -93,7 +73,7 @@ heavy_vehicles = [
 	["rhsusf_m1a2sep1tuskiiwd_usarmy",20,450,25,GRLIB_perm_tank],
 	["rhsusf_m1a1hc_wd",20,550,25,GRLIB_perm_air],
 	["rhsusf_M142_usarmy_WD",30,500,30,GRLIB_perm_air],
-		["rhsusf_m109_usarmy",30,2200,30,GRLIB_perm_max]
+	["rhsusf_m109_usarmy",30,2200,30,GRLIB_perm_max]
 ];
 
 air_vehicles = [
@@ -101,17 +81,16 @@ air_vehicles = [
 	["RHS_MELB_AH6M",10,50,15,GRLIB_perm_air],
 	["RHS_UH1Y_UNARMED",10,100,5,GRLIB_perm_tank],
 	["RHS_UH1Y",10,150,5,GRLIB_perm_air],
-	["rhsusf_CH53e_USMC_cargo",5,350,8,GRLIB_perm_air],
-	["rhsusf_CH53E_USMC_GAU21",5,300,8,GRLIB_perm_air],
-	["RHS_CH_47F",5,350,10,GRLIB_perm_air],
+	["rhsusf_CH53e_USMC_cargo",5,350,200,GRLIB_perm_air],
+	["rhsusf_CH53E_USMC_GAU21",5,300,200,GRLIB_perm_air],
+	["RHS_CH_47F",5,350,150,GRLIB_perm_air],
 	["rhsusf_CH53E_USMC",15,500,15,GRLIB_perm_max],
-	["RHS_UH60M",5,250,5,GRLIB_perm_air],
-	["RHS_UH60M2",5,260,5,GRLIB_perm_air],
-	["RHS_UH60M_MEV2",7,230,5,GRLIB_perm_air],	
+	["RHS_UH60M",5,350,600,GRLIB_perm_air],
+	["RHS_UH60M2",5,350,600,GRLIB_perm_air],
 	["RHS_AH64D_wd",10,800,5,GRLIB_perm_air],
 	["RHS_AH1Z_wd",10,1000,5,GRLIB_perm_air],
-	["USAF_F22",15,1700,25,GRLIB_perm_max],
-	["USAF_A10",15,1500,15,GRLIB_perm_max]
+	["rhsusf_f22",15,1500,15,GRLIB_perm_max],
+	["RHS_A10",15,1500,15,GRLIB_perm_max]
 ];
 
 // Additional Airplanes
@@ -148,9 +127,7 @@ support_vehicles_west = [
 	["rhsusf_M977A4_REPAIR_usarmy_wd",5,15,5,GRLIB_perm_inf],
 	["rhsusf_M978A4_usarmy_wd",5,15,20,GRLIB_perm_inf],
 	["rhsusf_M977A4_AMMO_usarmy_wd",5,15,20,GRLIB_perm_tank],
-	["rhsusf_launcher_crate",0,150,0,GRLIB_perm_tank],
-	["ACE_Wheel",0,5,0,0],
-    ["ACE_Track",0,10,0,0]
+	["rhsusf_launcher_crate",0,150,0,GRLIB_perm_tank]
 ];
 
 buildings_west = [
@@ -259,7 +236,7 @@ GRLIB_AirDrop_1 = [			// Unarmed Offroader 50
 ];
 
 GRLIB_AirDrop_2 = [			// Armed Offroader 100
-	"rhsusf_m1025_w_m2"
+	"rhsusf_m1025_w_mk19"
 ];
 
 GRLIB_AirDrop_3 = [			// MRAP 200
